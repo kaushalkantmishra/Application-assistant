@@ -1,0 +1,335 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    background-color: rgb(146, 215, 239);
+}
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login{
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+.login h2 {
+    text-align: center;
+    color: #333;
+    background-color:#e8dcdc ;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login label {
+    margin-bottom: 8px;
+    margin-left: 10px;
+    color: #555;
+}
+
+.login input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.login button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: #0056b3;
+}
+
+.login p {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+.login a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.registration {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.registration h2 {
+    text-align: center;
+    color: #333;
+    background-color:#e8dcdc ;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.registration form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration label {
+    margin-bottom: 8px;
+    color: #555;
+    margin-left: 10px;
+}
+
+.registration input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.registration button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.registration button:hover {
+    background-color: #218838;
+}
+
+.registration p {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+.registration a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.registration a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.home{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+b{
+    color: brown;
+}
+p{
+    margin-top: 10px;
+    text-align: justify;
+}
+.hbtn{
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.hbtn:hover {
+    background-color: #ca0707;
+}
+
+
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+.fbtn {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto; /* Adjust margin as needed */
+    max-width: 300px; /* Adjust max-width as needed */
+}
+button {
+    background-color: #000000;
+    color: white;
+    padding: 6px 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #bc0303;
+}
+
+
+.company {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 20px auto; /* Adjust margin as needed */
+}
+
+.company form {
+    display: flex;
+    flex-direction: row;
+}
+
+.company label {
+    font-weight: bold;
+    margin-right: 10px; /* Adjust margin as needed */
+    margin-left: 10px;
+}
+
+.company input {
+    padding: 3px;
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.company button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.company button:hover {
+    background-color: #218838;
+}
+a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ca0707;
+}
+.comlink{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the form labels and inputs */
+.applied {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+     /* Optional: Adjust the height to your preference */
+}
+
+/* Style for the form container within the applied div */
+.applied form {
+    width: 300px;
+}
+.applied label {
+    display: block;
+    margin-bottom: 5px; 
+}
+.applied input {
+    width: 100%; 
+    padding: 8px; /* Add padding for better aesthetics */
+    margin-bottom: 5px; /* Add margin between inputs */
+}
+
+/* Style for the submit button */
+.btn1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-left: 42%;
+}
+
+.btn1:hover {
+    background-color: #45a049;
+}
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar img {
+    height: 50px; /* Set the desired height */
+    width: auto;
+    background-color: transparent; /* Maintain aspect ratio */
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.navbar-links {
+    list-style: none;
+    display: flex;
+    text-align: center;
+}
+.navbar-links li {
+    margin-right: 20px; /* Adjust the spacing between links */
+}
+.navbar a:hover {
+    color: #ffcc00; /* Change to your desired hover color */
+}

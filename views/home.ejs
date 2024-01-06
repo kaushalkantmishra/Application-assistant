@@ -1,0 +1,41 @@
+<!-- views/home.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+      table,tr,th,td{
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('navbar.ejs') %>
+    <h2>List of Targeted Companies</h2>
+    <div class="htb"></div>
+      <table>
+        <tr>
+          <th>Company Name</th>
+          <th>Expected Date to Apply</th>
+        </tr>
+        <% for(company of companies) { %>
+        <tr>
+          <td><%= company.company_name %></td>
+          <td><%= company.expected_date %></td>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+    <div class="fbtn">
+      <form action="/company" method="GET">
+        <button type="submit">Add New Company</button>
+      </form>
+      <form action="/user_table" method="GET">
+        <button type="submit">Applied Vacancy</button>
+      </form>
+    </div>
+  </body>
+</html>
