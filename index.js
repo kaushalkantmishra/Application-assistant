@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -5,13 +6,15 @@ const methodOverride = require("method-override");
 const { v4: uuidv4 } = require("uuid");
 const { addCompany, getAllCompanies, addUser, getAllUsers, promisePool } = require("./models");
 
+
+
 const config = {
   port: process.env.PORT || 8080,
   database: {
-    host: "localhost",
-    user: "root",
-    password: "0504",
-    name: "company_management_db",
+    host: process.env.DB_HOST,
+    user:process.env.DB_USER,
+    password:process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
   },
 };
 
@@ -46,7 +49,6 @@ app.get("/login", (req, res) => {
 app.post("/login", async (req, res) => {
   const { name, email } = req.body;
 
-  // Implement your login logic here
 
   // Fetch user registration data from the registration table
   try {
@@ -109,13 +111,14 @@ app.get("/company", async (req, res) => {
 });
 
 app.post("/company", async (req, res) => {
-  const { company_name, expected_date } = req.body;
+  const { company_name, expected_date, company_url } = req.body;
   const companyId = uuidv4();
 
   const companyData = {
     id: companyId,
     company_name,
     expected_date,
+    company_url,
   };
 
   try {
@@ -126,6 +129,7 @@ app.post("/company", async (req, res) => {
     res.status(500).send("Error adding company: " + error.message);
   }
 });
+
 
 // applied vacancy route
 

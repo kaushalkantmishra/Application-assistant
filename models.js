@@ -1,22 +1,17 @@
 // models.js
 const mysql = require("mysql2");
-const config = require("./config"); // Adjust the path accordingly
-const pool = mysql.createPool({
-  host: config.database.host,
-  user: config.database.user,
-  password: config.database.password,
-  database: config.database.name,
-});
+const config = require("./config");
+const pool = mysql.createPool(config.database);
 
 const promisePool = pool.promise();
 
 const addCompany = async (companyData) => {
-  const { id, company_name, expected_date } = companyData;
+  const { id, company_name, expected_date, company_url } = companyData;
   const query = `
-    INSERT INTO company (id, company_name, expected_date)
-    VALUES (?, ?, ?)
+    INSERT INTO company (id, company_name, expected_date, company_url)
+    VALUES (?, ?, ?, ?)
   `;
-  const values = [id, company_name, expected_date];
+  const values = [id, company_name, expected_date, company_url];
 
   try {
     await promisePool.query(query, values);

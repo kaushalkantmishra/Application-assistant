@@ -4,7 +4,8 @@ USE company_management_db;
 CREATE TABLE IF NOT EXISTS company (
     id VARCHAR(50) PRIMARY KEY,
     company_name VARCHAR(100), -- Removed UNIQUE constraint
-    expected_date DATE
+    expected_date DATE,
+    company_url VARCHAR(255) DEFAULT NULL;
 );
 
 CREATE TABLE user (

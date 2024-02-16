@@ -9,25 +9,27 @@
 </head>
 <body>
     <%- include('navbar.ejs') %>
-    <h2>Edit User</h2>
-    <form method="POST" action="/user_table/<%= user.id %>?_method=PUT">
-        <label for="company_name">Company Name:</label>
-        <input type="text" id="company_name" name="company_name" value="<%= user.company_name %>" required>
+    <div class="edit-user-container">
+        <h2 class="edit-user-title">Edit User</h2>
+        <form class="edit-user-form" method="POST" action="/user_table/<%= user.id %>?_method=PUT">
+            <label for="company_name">Company Name:</label>
+            <input type="text" id="company_name" name="company_name" value="<%= user.company_name %>" required>
 
-        <label for="role">Role:</label>
-        <input type="text" id="role" name="role" value="<%= user.role %>" required>
+            <label for="role">Role:</label>
+            <input type="text" id="role" name="role" value="<%= user.role %>" required>
 
-        <label for="applied_date">Applied Date:</label>
-        <input type="date" id="applied_date" name="applied_date" value="<%= user.applied_date %>" required>
+            <label for="applied_date">Applied Date:</label>
+            <input type="date" id="applied_date" name="applied_date" value="<%= user.applied_date %>" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="<%= user.email %>" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="<%= user.email %>" required>
 
-        <label for="status">Status:</label>
-        <input type="text" id="status" name="status" value="<%= user.status %>" required>
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" value="<%= user.status %>" required>
 
-        <button type="submit">Save Changes</button>
-    </form>
-    <a href="/user_table">Go back to user table</a>
+            <button type="submit" class="save-changes-btn">Save Changes</button>
+        </form>
+    </div>
+    <a href="/user_table" class="go-back-link">Go back to user table</a>
 </body>
 </html>
