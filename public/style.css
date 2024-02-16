@@ -540,7 +540,7 @@ a:hover {
   }
 }
 
-@media only screen and (min-width: 1025px) {
+/* @media only screen and (min-width: 1025px) {
   .login,
   .registration,
   .home,
@@ -551,4 +551,4 @@ a:hover {
     margin-left: 20%;
     margin-right: 20%;
   }
-}
+} */
